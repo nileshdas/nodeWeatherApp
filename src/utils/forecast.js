@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         callback('Invalid Location', undefined)
       }
       else{
-        callback(undefined, 'It is currently ' + body.current.temp + ' degrees outside. And the general weather is ' + body.current.weather[0].description )
+        callback(undefined, 'It is currently ' + body.current.temp + ' degrees but feels like ' + body.current.feels_like + ' degrees outside. And the general weather is ' + body.current.weather[0].description )
       }
   })
 }
